@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import QuantityPokemon from "./components/QuantityPokemon";
+import BuyPokemon from "./components/BuyPokemon";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App container">
+      <div className="row">
+        <div className="col-12">
+          <div className="card mt-5" style={{ maxWidth: "370px" }}>
+            <div className="row no-gutters">
+              <div className="col-4">
+                <img src="pokemon.jpg" alt="pokemon" className="card-img" />
+              </div>
+              <div className="col-8">
+                <div className="card-body">
+                  <QuantityPokemon />
+                  <BuyPokemon />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
