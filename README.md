@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### FIX watchpack error (watcher) error enospc system limit for number of file watchers reached watch
+
+If you want to get error once you are trying to execute npm start, it’s because of your `max_user_watches` was reached the maximum number. Simply you can increase the `max_user_watches` by running this command :
+
+`echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf`
+
+`sudo sysctl -p`
+
+Now you can run npm start again.
+
+`npm start`
