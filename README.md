@@ -1,3 +1,7 @@
+# practica-redux-react
+
+Basic practice for project redux and redux thunk use pokemon api
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
